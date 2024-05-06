@@ -14,10 +14,29 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.745150646299-5ltf1benka4i8tkuvs2hrsmnus1crh0c"
+        }
+      ]
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rafiialgh.tk4-mobile-programming",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.745150646299-5ltf1benka4i8tkuvs2hrsmnus1crh0c"
+            ]
+          }
+        ]
+      }
     },
     "android": {
+      "package": "com.rafiialgh.tk4mobileprogramming",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +44,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d46a8956-5284-4e13-8012-e0604c475cca"
+      }
     }
   }
 }
